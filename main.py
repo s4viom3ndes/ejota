@@ -13,16 +13,10 @@ print(listUser_id)
 
 # normalizando dados inseridos na lista
 
-# calculando a media
-soma = 0
-
-soma = sum(listUser_id)
-print(soma)
-media = soma/len(listUser_id)
-print(media)
-
 menor = min(listUser_id)
 maior = max(listUser_id)
-
-normalizacao = (listUser_id(1) - menor)/(maior - menor)
+normalizacao = []
+for valor in listUser_id:
+    valor_indx = (listUser_id[valor] - menor)/(maior - menor)
+    normalizacao.append(valor_indx)
 print(f'normalizacao = {normalizacao}')
