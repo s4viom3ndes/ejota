@@ -21,14 +21,14 @@ normalizacao = []
 #
 tam = len(listUser_id)
 cont = 0
-#
+# percorrendo a lista e inserindo os valores normalizados em um conjunto
 for valor in listUser_id:
 
     list_indx = (listUser_id[cont] - menor)/(maior-menor)
     cont = cont + 1
     normalizacao.append(list_indx)
 
-print(f'normalizacao = {normalizacao}')
+print(f'normalizacao = {set(normalizacao)}')
 
 # deletando coluna
 
@@ -41,11 +41,8 @@ dataframe['Dados'] = 'NGM SEGURA B)'
 dataframe['valor'] = 12
 dataframe['qtd de produtos'] = 2
 dataframe['valor/produtos'] = dataframe['valor'] / dataframe['qtd de produtos']
-dataframe['bool'] = False
+dataframe['bool'] = 'sim'
 print(dataframe)
-if dataframe['bool'].bool() == False:
-
-    dataframe['bool'] = 'sim'
 
 
 print(dataframe)
